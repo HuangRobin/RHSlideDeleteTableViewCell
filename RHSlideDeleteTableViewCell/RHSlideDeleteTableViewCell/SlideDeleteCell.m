@@ -113,6 +113,7 @@
                 self.alpha = 0.0;
                 
             } completion:^(BOOL finsh){
+                self.transform = CGAffineTransformIdentity;
                 if ([delegate respondsToSelector:@selector(slideToDeleteCell:)]) {
                     [delegate slideToDeleteCell:self];
                 }
